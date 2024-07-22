@@ -44,11 +44,21 @@ public class Transito {
         return false;
     }
     
-    public String print() {
+    public String print(int codigo) {
+        String text = "";
+        Multa multa = buscar(codigo);
+        if (multa != null)
+            text = "Nombre: " + multa.getNombre() + "\nCódigo: " 
+                    + multa.getCodigo() + "\nTipo: " + multa.getTipo() 
+                    + "\nPagada: " + multa.getPagado() + "\n";
+        return text;
+    }
+    
+    public String printTodas() {
         String text = "";
         for (int i = 0; i < multas.length; i++)
             if (multas[i] != null)
-                text = "Nombre: " + multas[i].getNombre() + "\nCódigo: " 
+                text += "Nombre: " + multas[i].getNombre() + "\nCódigo: " 
                         + multas[i].getCodigo() + "\nTipo: " + multas[i].getTipo() 
                         + "\nPagada: " + multas[i].getPagado();
         return text;
