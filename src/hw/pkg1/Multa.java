@@ -56,12 +56,12 @@ public class Multa {
     
     public String pay() {
         pagado = true;
-        return "Multa con Código #" + codigo + " fue "
-                + "pagada por un monto de Lps." + monto;
+        return "Multa con Código #" + codigo + " fue pagada "
+                + "\npor un monto de Lps." + monto;
     }
     
-    public String print() {
-        String text = (pagado == true) ? "Pagada por un monto de Lps." 
+    public String print(boolean paga) {
+        String text = (paga) ? "Pagada por un monto de Lps." 
                 + monto : "Multa pendiente";
         return text;
     }

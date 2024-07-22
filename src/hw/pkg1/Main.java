@@ -36,9 +36,13 @@ public class Main extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jButton1.setText("BUSCAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -72,10 +76,17 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Salir");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setText("INFORMACIÓN");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("ESTADO");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
             }
         });
 
@@ -84,19 +95,17 @@ public class Main extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(43, 43, 43)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jButton5)))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,22 +120,39 @@ public class Main extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1))
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jButton5.setText("Salir");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -140,29 +166,6 @@ public class Main extends javax.swing.JFrame {
     //BUSCAR
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean valido = false;
-            int codigo = 0;
-            while (!valido) {
-                try {
-                    codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingresar codigo"));
-                    valido = true;
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Ingresar numeros enteros");
-                }
-            }
-            
-            Multa multa = transito.buscar(codigo);
-            if (multa != null) {
-                String text = transito.print(codigo);
-                JOptionPane.showMessageDialog(null, text);
-            } else {
-                JOptionPane.showMessageDialog(null, "No existe multa con dicho codigo");
-            }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    //AGREGAR
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String nombre = JOptionPane.showInputDialog("Ingresar nombre");
-        boolean valido = false;
         int codigo = 0;
         while (!valido) {
             try {
@@ -172,6 +175,40 @@ public class Main extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Ingresar numeros enteros");
             }
         }
+
+        Multa multa = transito.buscar(codigo);
+        if (multa != null) {
+            String text = transito.print(codigo);
+            TextArea.setText(text);
+        } else {
+            JOptionPane.showMessageDialog(null, "No existe multa con dicho codigo");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    //AGREGAR
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String nombre = JOptionPane.showInputDialog("Ingresar nombre");
+        boolean valido = false;
+        int codigo = 0;
+        
+        do {
+            while (!valido) {
+                try {
+                    codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingresar codigo"));
+                    valido = true;
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Ingresar numeros enteros");
+                }
+            }
+            
+            if (transito.buscar(codigo) != null) {
+                JOptionPane.showMessageDialog(null, "Ya existe una multa con dicho codigo");
+                valido = false;
+            } else {
+                break;
+            }
+                
+        } while(transito.buscar(codigo) != null);
         
         String tipo;
         do {
@@ -193,8 +230,53 @@ public class Main extends javax.swing.JFrame {
 
     //PAGAR
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        boolean valido = false;
+        int codigo = 0;
+        while (!valido) {
+            try {
+                codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingresar codigo"));
+                valido = true;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresar numeros enteros");
+            }
+        }
+        
+        if (!transito.pagarMulta(codigo)) {
+            JOptionPane.showMessageDialog(null, "No existe multa con dicho codigo");
+        } else {
+            String text = transito.text;
+            TextArea.setText(text);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    //INFORMACION
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String text = transito.info();
+        TextArea.setText(text);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    //ESTADO
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        boolean valido = false;
+        int codigo = 0;
+        while (!valido) {
+            try {
+                codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingresar codigo"));
+                valido = true;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Ingresar numeros enteros");
+            }
+        }
+
+        Multa multa = transito.buscar(codigo);
+        if (multa != null) {
+            boolean pagado = multa.getPagado();
+            String text = multa.print(pagado);
+            TextArea.setText(text);
+        } else {
+            JOptionPane.showMessageDialog(null, "No existe multa con dicho codigo");
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +320,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
